@@ -16,6 +16,6 @@
 
 - (void)projectsWithResponseHandler:(void (^)(NSDictionary *))success;
 - (void)timeSpentTodayWithResponseHandler:(void (^)(NSDictionary *))success;
-- (void)logWorkFor:(NSString *)project responseHandler:(void (^)(NSDictionary *))success;
+- (void)logWorkFor:(NSString *)project responseHandler:(void (^)(BOOL))success;
 
 @end
