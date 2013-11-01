@@ -19,6 +19,7 @@
 		BF8C75DDF4675391B34B77CF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BF8C7FDF1A00367229333034 /* Credits.rtf */; };
 		BF8C76A1521209F4997CA642 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8C70A7F81CB57193E60DF9 /* Cocoa.framework */; };
 		BF8C77D244BDC9FC1143C7CA /* TimeTrackerClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C737D2DFE325F3D2DC584 /* TimeTrackerClientTests.m */; };
+		BF8C7860142B92E474F338B2 /* TimeTrackerRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C7B702C8F58C5BFC4384B /* TimeTrackerRestService.m */; };
 		BF8C7C49F4F3C0AABCCA51ED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8C7CB1D5593A389AAE6D7D /* MainMenu.xib */; };
 		BF8C7CDC831C241AE990DCB3 /* ConfigService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C7EA5D7879C7AC4BE4F7E /* ConfigService.m */; };
 		BF8C7F98FE1E1D85DB0F7CAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C7031DEDDC54A0EA224C3 /* AppDelegate.m */; };
@@ -40,9 +41,11 @@
 		BF8C706BC9240ED897E27B1D /* TimeTrackerClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeTrackerClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8C7081B0E17564A39D8B4E /* TimeTrackerClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeTrackerClient-Prefix.pch"; sourceTree = "<group>"; };
 		BF8C70A7F81CB57193E60DF9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BF8C70C74BADA0774BC6A41A /* TimeTrackerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTrackerService.h; sourceTree = "<group>"; };
 		BF8C715D86085B82B20D8AF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF8C7215142965B59D6982A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BF8C729F40EABA2D07862028 /* ConfigService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigService.h; sourceTree = "<group>"; };
+		BF8C735D638838611679C050 /* TimeTrackerRestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTrackerRestService.h; sourceTree = "<group>"; };
 		BF8C737D2DFE325F3D2DC584 /* TimeTrackerClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeTrackerClientTests.m; sourceTree = "<group>"; };
 		BF8C74023202987569B35CD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF8C74DC400F9904A420F8E8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -55,6 +58,7 @@
 		BF8C79091A90EDE6FC0FE99F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF8C795F317DF2B7214691EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BF8C7B2B7B5A138DB28EF6C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF8C7B702C8F58C5BFC4384B /* TimeTrackerRestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTrackerRestService.m; sourceTree = "<group>"; };
 		BF8C7C70C6B57B5E83CDF605 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Settings.plist; sourceTree = "<group>"; };
 		BF8C7D6BB77BCF5F108A85C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		BF8C7E072569896D187C9CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -176,6 +180,9 @@
 			children = (
 				BF8C7EA5D7879C7AC4BE4F7E /* ConfigService.m */,
 				BF8C729F40EABA2D07862028 /* ConfigService.h */,
+				BF8C70C74BADA0774BC6A41A /* TimeTrackerService.h */,
+				BF8C7B702C8F58C5BFC4384B /* TimeTrackerRestService.m */,
+				BF8C735D638838611679C050 /* TimeTrackerRestService.h */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -247,8 +254,6 @@
 			mainGroup = BF8C7CDE8EF7FC125EAAED06;
 			productRefGroup = BF8C7B68748A04380992DBF5 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				BF8C769A630B02EAF161284B /* TimeTrackerClient */,
@@ -330,6 +335,7 @@
 				BF8C7F98FE1E1D85DB0F7CAD /* AppDelegate.m in Sources */,
 				BF8C730FAEF1B214BC0C98DB /* ApiClent.m in Sources */,
 				BF8C7CDC831C241AE990DCB3 /* ConfigService.m in Sources */,
+				BF8C7860142B92E474F338B2 /* TimeTrackerRestService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +538,7 @@
 				BF8C71505333A146A47CD55C /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF8C79E466EC119E114DA933 /* Build configuration list for PBXNativeTarget "TimeTrackerClientTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +547,7 @@
 				BF8C7C56FF25AC0C6F225FCB /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

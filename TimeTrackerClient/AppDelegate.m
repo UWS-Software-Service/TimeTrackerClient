@@ -8,12 +8,51 @@
 
 #import "AppDelegate.h"
 #import "ConfigService.h"
+#import "TimeTrackerRestService.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [[ConfigService instance] registerDefaultSettings];
+	[[ConfigService instance] registerDefaultSettings];
+	[self configureStatusItem];
+	[self loadProjects];
+}
+
+- (void)configureStatusItem
+{
+	self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+	self.statusItem.highlightMode = YES;
+	self.statusItem.menu = self.menu;
+	self.statusItem.title = @"TT";
+}
+
+- (void)loadProjects
+{
+	[[TimeTrackerRestService instance] projects:^(NSArray *projects) {
+		for (NSString *project in projects) {
+			NSMenuItem *projectItem = [[NSMenuItem alloc] initWithTitle:project
+			                                                     action:@selector(projectSelected:)
+				                                          keyEquivalent:@""];
+			[self.projectManu addItem:projectItem];
+		}
+	}];
+}
+
+- (void)projectSelected:(NSMenuItem *)menuItem
+{
+	NSString *projectName = menuItem.title;
+	[[TimeTrackerRestService instance] logWorkFor:projectName responseHandler:^(BOOL isSuccess) {
+		if (isSuccess) {
+			if ([menuItem.image.name isEqualToString:NSImageNameStatusUnavailable]) {
+				menuItem.image = nil;
+			} else {
+				menuItem.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
+			}
+		} else {
+			NSLog(@"Cannot log time for %@", projectName);
+		}
+	}];
 }
 
 @end
