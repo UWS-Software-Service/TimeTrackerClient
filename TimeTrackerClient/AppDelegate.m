@@ -7,13 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "ConfigService.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
-
+    [[ConfigService instance] registerDefaultSettings];
 }
 
 @end
