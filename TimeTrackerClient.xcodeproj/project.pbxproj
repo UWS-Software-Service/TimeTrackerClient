@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0840BFCDE8D243B79B7E102B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC04339545347B0B1B43BC1 /* libPods.a */; };
+		BF8C72260EBB3297920F9789 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8C70A7F81CB57193E60DF9 /* Cocoa.framework */; };
+		BF8C72DFE2354F4ABD23CFB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C74023202987569B35CD0 /* main.m */; };
+		BF8C73B24B8475A57525CC51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF8C72AF9F59A1FC6FE183E3 /* InfoPlist.strings */; };
+		BF8C7406FEA21739DC88EE4C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8C7215142965B59D6982A3 /* XCTest.framework */; };
+		BF8C748EBE5F6E4EBA9AB789 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF8C705DC07B980D2264B251 /* InfoPlist.strings */; };
+		BF8C75738F4D9A7797DFC38D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8C7B2B7B5A138DB28EF6C9 /* Images.xcassets */; };
+		BF8C75DDF4675391B34B77CF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BF8C7FDF1A00367229333034 /* Credits.rtf */; };
+		BF8C76A1521209F4997CA642 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8C70A7F81CB57193E60DF9 /* Cocoa.framework */; };
+		BF8C77D244BDC9FC1143C7CA /* TimeTrackerClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C737D2DFE325F3D2DC584 /* TimeTrackerClientTests.m */; };
+		BF8C7C49F4F3C0AABCCA51ED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8C7CB1D5593A389AAE6D7D /* MainMenu.xib */; };
+		BF8C7F98FE1E1D85DB0F7CAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C7031DEDDC54A0EA224C3 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF8C740ACA028CBF14A02876 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF8C7F00533CB528EBCF85B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF8C769A630B02EAF161284B;
+			remoteInfo = TimeTrackerClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EC04339545347B0B1B43BC1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8C7031DEDDC54A0EA224C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF8C706BC9240ED897E27B1D /* TimeTrackerClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeTrackerClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8C7081B0E17564A39D8B4E /* TimeTrackerClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeTrackerClient-Prefix.pch"; sourceTree = "<group>"; };
+		BF8C70A7F81CB57193E60DF9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BF8C715D86085B82B20D8AF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF8C7215142965B59D6982A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BF8C737D2DFE325F3D2DC584 /* TimeTrackerClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeTrackerClientTests.m; sourceTree = "<group>"; };
+		BF8C74023202987569B35CD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF8C74DC400F9904A420F8E8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BF8C7642DED486120A3F00C7 /* TimeTrackerClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "TimeTrackerClient-Info.plist"; sourceTree = "<group>"; };
+		BF8C76790B4B2F16E3B03B41 /* TimeTrackerClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "TimeTrackerClientTests-Info.plist"; sourceTree = "<group>"; };
+		BF8C768272C11B81A787B91E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BF8C77FB5BA5FA18EC24E838 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF8C78125F941F9D11A998F3 /* TimeTrackerClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTrackerClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8C79091A90EDE6FC0FE99F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF8C795F317DF2B7214691EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BF8C7B2B7B5A138DB28EF6C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF8C7D6BB77BCF5F108A85C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		BF8C7E072569896D187C9CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E7A783146D7642ACB89B63AA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF8C703AC1BB0A44048D9C74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8C7406FEA21739DC88EE4C /* XCTest.framework in Frameworks */,
+				BF8C72260EBB3297920F9789 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF8C723F849C1E05457D0523 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8C76A1521209F4997CA642 /* Cocoa.framework in Frameworks */,
+				0840BFCDE8D243B79B7E102B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF8C75D34B7AC2DF91B61902 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF8C70A7F81CB57193E60DF9 /* Cocoa.framework */,
+				BF8C762AA54E4B063CAC84FC /* Other Frameworks */,
+				BF8C7215142965B59D6982A3 /* XCTest.framework */,
+				1EC04339545347B0B1B43BC1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF8C762AA54E4B063CAC84FC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF8C74DC400F9904A420F8E8 /* AppKit.framework */,
+				BF8C795F317DF2B7214691EA /* CoreData.framework */,
+				BF8C768272C11B81A787B91E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BF8C76EFDF018C149806ABEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF8C7642DED486120A3F00C7 /* TimeTrackerClient-Info.plist */,
+				BF8C72AF9F59A1FC6FE183E3 /* InfoPlist.strings */,
+				BF8C74023202987569B35CD0 /* main.m */,
+				BF8C7081B0E17564A39D8B4E /* TimeTrackerClient-Prefix.pch */,
+				BF8C7FDF1A00367229333034 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF8C78972E76B4BE5E2BA337 /* TimeTrackerClient */ = {
+			isa = PBXGroup;
+			children = (
+				BF8C76EFDF018C149806ABEC /* Supporting Files */,
+				BF8C7B2B7B5A138DB28EF6C9 /* Images.xcassets */,
+				BF8C715D86085B82B20D8AF5 /* AppDelegate.h */,
+				BF8C7031DEDDC54A0EA224C3 /* AppDelegate.m */,
+				BF8C7CB1D5593A389AAE6D7D /* MainMenu.xib */,
+			);
+			path = TimeTrackerClient;
+			sourceTree = "<group>";
+		};
+		BF8C7B0F6729CE8BBA81AC09 /* TimeTrackerClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF8C7E823266C0000D2DDADD /* Supporting Files */,
+				BF8C737D2DFE325F3D2DC584 /* TimeTrackerClientTests.m */,
+			);
+			path = TimeTrackerClientTests;
+			sourceTree = "<group>";
+		};
+		BF8C7B68748A04380992DBF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF8C78125F941F9D11A998F3 /* TimeTrackerClient.app */,
+				BF8C706BC9240ED897E27B1D /* TimeTrackerClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF8C7CDE8EF7FC125EAAED06 = {
+			isa = PBXGroup;
+			children = (
+				BF8C7B68748A04380992DBF5 /* Products */,
+				BF8C75D34B7AC2DF91B61902 /* Frameworks */,
+				BF8C78972E76B4BE5E2BA337 /* TimeTrackerClient */,
+				BF8C7B0F6729CE8BBA81AC09 /* TimeTrackerClientTests */,
+				E7A783146D7642ACB89B63AA /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		BF8C7E823266C0000D2DDADD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF8C76790B4B2F16E3B03B41 /* TimeTrackerClientTests-Info.plist */,
+				BF8C705DC07B980D2264B251 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF8C769A630B02EAF161284B /* TimeTrackerClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF8C78A4A00D900B5CD63230 /* Build configuration list for PBXNativeTarget "TimeTrackerClient" */;
+			buildPhases = (
+				9C1DE7361DD549E5AD27DCF0 /* Check Pods Manifest.lock */,
+				BF8C78868252B1C15146A53A /* Sources */,
+				BF8C723F849C1E05457D0523 /* Frameworks */,
+				BF8C726A1E2E3AAA052BAC37 /* Resources */,
+				B1F4A721A0BD4DB4B3FFC017 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeTrackerClient;
+			productName = TimeTrackerClient;
+			productReference = BF8C78125F941F9D11A998F3 /* TimeTrackerClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF8C7CCE9782DFA497C1960A /* TimeTrackerClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF8C79E466EC119E114DA933 /* Build configuration list for PBXNativeTarget "TimeTrackerClientTests" */;
+			buildPhases = (
+				BF8C70836B0FDD8B06D6FFF2 /* Sources */,
+				BF8C703AC1BB0A44048D9C74 /* Frameworks */,
+				BF8C75709E8DA3F35ACB2682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF8C72156DA96C17212040E3 /* PBXTargetDependency */,
+			);
+			name = TimeTrackerClientTests;
+			productName = TimeTrackerClientTests;
+			productReference = BF8C706BC9240ED897E27B1D /* TimeTrackerClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF8C7F00533CB528EBCF85B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = UWS;
+			};
+			buildConfigurationList = BF8C7023C70657323662351C /* Build configuration list for PBXProject "TimeTrackerClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BF8C7CDE8EF7FC125EAAED06;
+			productRefGroup = BF8C7B68748A04380992DBF5 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				BF8C769A630B02EAF161284B /* TimeTrackerClient */,
+				BF8C7CCE9782DFA497C1960A /* TimeTrackerClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF8C726A1E2E3AAA052BAC37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8C73B24B8475A57525CC51 /* InfoPlist.strings in Resources */,
+				BF8C75DDF4675391B34B77CF /* Credits.rtf in Resources */,
+				BF8C75738F4D9A7797DFC38D /* Images.xcassets in Resources */,
+				BF8C7C49F4F3C0AABCCA51ED /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF8C75709E8DA3F35ACB2682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8C748EBE5F6E4EBA9AB789 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C1DE7361DD549E5AD27DCF0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B1F4A721A0BD4DB4B3FFC017 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF8C70836B0FDD8B06D6FFF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8C77D244BDC9FC1143C7CA /* TimeTrackerClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF8C78868252B1C15146A53A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8C72DFE2354F4ABD23CFB0 /* main.m in Sources */,
+				BF8C7F98FE1E1D85DB0F7CAD /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF8C72156DA96C17212040E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF8C769A630B02EAF161284B /* TimeTrackerClient */;
+			targetProxy = BF8C740ACA028CBF14A02876 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF8C705DC07B980D2264B251 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF8C77FB5BA5FA18EC24E838 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BF8C72AF9F59A1FC6FE183E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF8C79091A90EDE6FC0FE99F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BF8C7CB1D5593A389AAE6D7D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF8C7E072569896D187C9CF6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		BF8C7FDF1A00367229333034 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF8C7D6BB77BCF5F108A85C8 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF8C703B1F626C22099BAD9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BF8C71505333A146A47CD55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A783146D7642ACB89B63AA /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeTrackerClient/TimeTrackerClient-Prefix.pch";
+				INFOPLIST_FILE = "TimeTrackerClient/TimeTrackerClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BF8C73AEAD55CA26370AD2C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BF8C776C19073EE07167097C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A783146D7642ACB89B63AA /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeTrackerClient/TimeTrackerClient-Prefix.pch";
+				INFOPLIST_FILE = "TimeTrackerClient/TimeTrackerClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BF8C7C56FF25AC0C6F225FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TimeTrackerClient.app/Contents/MacOS/TimeTrackerClient";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeTrackerClient/TimeTrackerClient-Prefix.pch";
+				INFOPLIST_FILE = "TimeTrackerClientTests/TimeTrackerClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BF8C7E70E3F4F9AA18673970 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TimeTrackerClient.app/Contents/MacOS/TimeTrackerClient";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeTrackerClient/TimeTrackerClient-Prefix.pch";
+				INFOPLIST_FILE = "TimeTrackerClientTests/TimeTrackerClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF8C7023C70657323662351C /* Build configuration list for PBXProject "TimeTrackerClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF8C703B1F626C22099BAD9F /* Release */,
+				BF8C73AEAD55CA26370AD2C8 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF8C78A4A00D900B5CD63230 /* Build configuration list for PBXNativeTarget "TimeTrackerClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF8C776C19073EE07167097C /* Release */,
+				BF8C71505333A146A47CD55C /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF8C79E466EC119E114DA933 /* Build configuration list for PBXNativeTarget "TimeTrackerClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF8C7E70E3F4F9AA18673970 /* Release */,
+				BF8C7C56FF25AC0C6F225FCB /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF8C7F00533CB528EBCF85B2 /* Project object */;
+}
