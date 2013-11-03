@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ConfigService.h"
 #import "TimeTrackerRestService.h"
+#import "SettingsController.h"
 
 @implementation AppDelegate
 
@@ -53,6 +54,12 @@
 			NSLog(@"Cannot log time for %@", projectName);
 		}
 	}];
+}
+
+- (IBAction)settingsMenuClicked:(id)sender
+{
+	self.settingsController = [[SettingsController alloc] initWithWindowNibName:@"SettingsController"];
+	[self.settingsController showWindow:self];
 }
 
 @end

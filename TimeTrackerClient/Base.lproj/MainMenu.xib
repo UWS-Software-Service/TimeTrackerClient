@@ -25,8 +25,11 @@
                     <menu key="submenu" title="Menu" id="b8p-Zz-E4M"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="yll-TZ-Kmu"/>
-                <menuItem title="Settings" image="NSMenuOnStateTemplate" id="IBB-9T-qLa">
+                <menuItem title="Settings" id="IBB-9T-qLa">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="settingsMenuClicked:" target="494" id="IVR-Au-Gtv"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Quit" id="V2o-l1-nW0">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -37,7 +40,4 @@
             </items>
         </menu>
     </objects>
-    <resources>
-        <image name="NSMenuOnStateTemplate" width="11" height="11"/>
-    </resources>
 </document>

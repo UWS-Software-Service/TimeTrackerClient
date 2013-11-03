@@ -8,10 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class SettingsController;
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property(assign) IBOutlet NSMenu *menu;
 @property(assign) IBOutlet NSMenu *projectManu;
 @property(strong) NSStatusItem *statusItem;
+@property(strong) SettingsController *settingsController;
 
 @end

@@ -23,6 +23,8 @@
 		BF8C7C49F4F3C0AABCCA51ED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8C7CB1D5593A389AAE6D7D /* MainMenu.xib */; };
 		BF8C7CDC831C241AE990DCB3 /* ConfigService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C7EA5D7879C7AC4BE4F7E /* ConfigService.m */; };
 		BF8C7F98FE1E1D85DB0F7CAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C7031DEDDC54A0EA224C3 /* AppDelegate.m */; };
+		D3DB6ED5182690C0002327BB /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DB6ED3182690C0002327BB /* SettingsController.m */; };
+		D3DB6ED6182690C0002327BB /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DB6ED4182690C0002327BB /* SettingsController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,9 @@
 		BF8C7E072569896D187C9CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BF8C7EA5D7879C7AC4BE4F7E /* ConfigService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigService.m; sourceTree = "<group>"; };
 		BF8C7F34A69A088FA0EF905E /* ApiClent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClent.m; sourceTree = "<group>"; };
+		D3DB6ED2182690C0002327BB /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		D3DB6ED3182690C0002327BB /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		D3DB6ED4182690C0002327BB /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
 		E7A783146D7642ACB89B63AA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF8C7417EEABE7B1C11818CD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3DB6ED2182690C0002327BB /* SettingsController.h */,
+				D3DB6ED3182690C0002327BB /* SettingsController.m */,
+				D3DB6ED4182690C0002327BB /* SettingsController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BF8C75D34B7AC2DF91B61902 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +157,7 @@
 				BF8C7CB1D5593A389AAE6D7D /* MainMenu.xib */,
 				BF8C779B2F1553D2FDD202F5 /* API */,
 				BF8C7DE6EB5487CC136F8E75 /* Services */,
+				BF8C7417EEABE7B1C11818CD /* Controllers */,
 			);
 			path = TimeTrackerClient;
 			sourceTree = "<group>";
@@ -271,6 +287,7 @@
 				BF8C75DDF4675391B34B77CF /* Credits.rtf in Resources */,
 				BF8C75738F4D9A7797DFC38D /* Images.xcassets in Resources */,
 				BF8C7C49F4F3C0AABCCA51ED /* MainMenu.xib in Resources */,
+				D3DB6ED6182690C0002327BB /* SettingsController.xib in Resources */,
 				BF8C72D551A0208B2414B512 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DB6ED5182690C0002327BB /* SettingsController.m in Sources */,
 				BF8C72DFE2354F4ABD23CFB0 /* main.m in Sources */,
 				BF8C7F98FE1E1D85DB0F7CAD /* AppDelegate.m in Sources */,
 				BF8C730FAEF1B214BC0C98DB /* ApiClent.m in Sources */,
