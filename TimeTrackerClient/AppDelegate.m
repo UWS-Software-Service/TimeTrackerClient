@@ -18,6 +18,7 @@
 	[[ConfigService instance] registerDefaultSettings];
 	[self configureStatusItem];
 	[self loadProjects];
+	[self updateCurrentDayTimeLog];
 }
 
 - (void)configureStatusItem
@@ -25,7 +26,7 @@
 	self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 	self.statusItem.highlightMode = YES;
 	self.statusItem.menu = self.menu;
-	self.statusItem.title = @"TT";
+	self.statusItem.title = @"0.0";
 }
 
 - (void)loadProjects
@@ -44,13 +45,11 @@
 	}];
 }
 
-- (void)setItemImage:(NSMenuItem *)projectItem dependingOnProjectState:(BOOL)isProjectActive
+- (void)updateCurrentDayTimeLog
 {
-	if (isProjectActive) {
-		projectItem.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
-	} else {
-		projectItem.image = nil;
-	}
+	[[TimeTrackerRestService instance] timeSpentToday:^(double timeSpentToday) {
+		self.statusItem.title = [NSString stringWithFormat:@"%.1f", timeSpentToday];
+	}];
 }
 
 - (void)projectSelected:(NSMenuItem *)menuItem
@@ -65,6 +64,8 @@
 			NSLog(@"Cannot log time for %@", projectName);
 		}
 	}];
+
+	[self updateCurrentDayTimeLog];
 }
 
 - (void)markAllOtherProjectsAsInactive:(NSString *)projectName
@@ -73,6 +74,15 @@
 		if (![projectItem.title isEqualToString:projectName]) {
 			projectItem.image = nil;
 		}
+	}
+}
+
+- (void)setItemImage:(NSMenuItem *)projectItem dependingOnProjectState:(BOOL)isProjectActive
+{
+	if (isProjectActive) {
+		projectItem.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
+	} else {
+		projectItem.image = nil;
 	}
 }
 

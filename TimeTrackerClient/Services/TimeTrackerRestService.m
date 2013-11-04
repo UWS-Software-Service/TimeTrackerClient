@@ -34,7 +34,9 @@
 
 - (void)timeSpentToday:(void (^)(double))block
 {
-
+	[[ApiClent instance] timeSpentTodayWithResponseHandler:^(NSDictionary *dictionary) {
+		block([[dictionary objectForKey:@"timeSpentToday"] doubleValue]);
+	}];
 }
 
 - (void)logWorkFor:(NSString *)project responseHandler:(void (^)(BOOL))block
