@@ -25,7 +25,7 @@
 	return _instance;
 }
 
-- (void)projects:(void (^)(NSArray *))block
+- (void)projects:(void (^)(NSDictionary *))block
 {
 	[[ApiClent instance] projectsWithResponseHandler:^(NSDictionary *dictionary) {
 		block([dictionary objectForKey:@"projects"]);

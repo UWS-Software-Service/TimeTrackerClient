@@ -30,11 +30,19 @@
 
 - (void)loadProjects
 {
-	[[TimeTrackerRestService instance] projects:^(NSArray *projects) {
+	[[TimeTrackerRestService instance] projects:^(NSDictionary *projects) {
 		for (NSString *project in projects) {
 			NSMenuItem *projectItem = [[NSMenuItem alloc] initWithTitle:project
 			                                                     action:@selector(projectSelected:)
 				                                          keyEquivalent:@""];
+
+			BOOL isProjectActive = [[projects objectForKey:project] boolValue];
+			if (isProjectActive) {
+				projectItem.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
+			} else {
+				projectItem.image = nil;
+			}
+
 			[self.projectManu addItem:projectItem];
 		}
 	}];

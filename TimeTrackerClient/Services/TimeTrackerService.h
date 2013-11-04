@@ -8,7 +8,7 @@
 
 @protocol TimeTrackerService <NSObject>
 
-- (void)projects:(void (^)(NSArray *))block;
+- (void)projects:(void (^)(NSDictionary *))block;
 
 - (void)timeSpentToday:(void (^)(double))block;
 
