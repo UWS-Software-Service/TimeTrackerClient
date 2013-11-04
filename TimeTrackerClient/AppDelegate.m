@@ -37,15 +37,20 @@
 				                                          keyEquivalent:@""];
 
 			BOOL isProjectActive = [[projects objectForKey:project] boolValue];
-			if (isProjectActive) {
-				projectItem.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
-			} else {
-				projectItem.image = nil;
-			}
+			[self setItemImage:projectItem dependingOnProjectState:isProjectActive];
 
 			[self.projectManu addItem:projectItem];
 		}
 	}];
+}
+
+- (void)setItemImage:(NSMenuItem *)projectItem dependingOnProjectState:(BOOL)isProjectActive
+{
+	if (isProjectActive) {
+		projectItem.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
+	} else {
+		projectItem.image = nil;
+	}
 }
 
 - (void)projectSelected:(NSMenuItem *)menuItem
@@ -53,15 +58,22 @@
 	NSString *projectName = menuItem.title;
 	[[TimeTrackerRestService instance] logWorkFor:projectName responseHandler:^(BOOL isSuccess) {
 		if (isSuccess) {
-			if ([menuItem.image.name isEqualToString:NSImageNameStatusUnavailable]) {
-				menuItem.image = nil;
-			} else {
-				menuItem.image = [NSImage imageNamed:NSImageNameStatusUnavailable];
-			}
+			BOOL isProjectActive = [menuItem.image.name isEqualToString:NSImageNameStatusUnavailable];
+			[self setItemImage:menuItem dependingOnProjectState:!isProjectActive];
+			[self markAllOtherProjectsAsInactive:projectName];
 		} else {
 			NSLog(@"Cannot log time for %@", projectName);
 		}
 	}];
+}
+
+- (void)markAllOtherProjectsAsInactive:(NSString *)projectName
+{
+	for (NSMenuItem *projectItem in [self.projectManu itemArray]) {
+		if (![projectItem.title isEqualToString:projectName]) {
+			projectItem.image = nil;
+		}
+	}
 }
 
 - (IBAction)settingsMenuClicked:(id)sender
