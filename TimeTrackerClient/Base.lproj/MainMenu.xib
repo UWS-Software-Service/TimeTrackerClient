@@ -20,9 +20,9 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="ulk-XJ-v4k">
             <items>
-                <menuItem title="Menu" id="881-fX-Nqd">
+                <menuItem title="Projects" id="881-fX-Nqd">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Menu" id="b8p-Zz-E4M"/>
+                    <menu key="submenu" title="Projects" id="b8p-Zz-E4M"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="yll-TZ-Kmu"/>
                 <menuItem title="Settings" id="IBB-9T-qLa">

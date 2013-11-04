@@ -63,9 +63,9 @@
 		} else {
 			NSLog(@"Cannot log time for %@", projectName);
 		}
-	}];
 
-	[self updateCurrentDayTimeLog];
+		[self updateCurrentDayTimeLog];
+	}];
 }
 
 - (void)markAllOtherProjectsAsInactive:(NSString *)projectName
