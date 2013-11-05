@@ -10,4 +10,9 @@
 
 @interface AddTaskWindowController : NSWindowController
 
+@property(assign) IBOutlet NSPopUpButton *projectList;
+@property(assign) IBOutlet NSTextField *taskField;
+@property(strong) NSArray *projectNames;
+
+- (id)initWithWindowNibName:(NSString *)windowNibName andProjectList:(NSArray *)projects;
 @end

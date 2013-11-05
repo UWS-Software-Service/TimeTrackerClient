@@ -95,8 +95,18 @@
 
 - (IBAction)addTaskMenuClicked:(id)sender
 {
-	self.addTaskWindowController = [[AddTaskWindowController alloc] initWithWindowNibName:@"AddTaskWindowController"];
+	self.addTaskWindowController = [[AddTaskWindowController alloc] initWithWindowNibName:@"AddTaskWindowController"
+	                                                                       andProjectList:[self projectNames]];
 	[self.addTaskWindowController showWindow:self];
+}
+
+- (NSArray *)projectNames
+{
+	NSMutableArray *projectNames = [NSMutableArray array];
+	for (NSMenuItem *projectItem in self.projectManu.itemArray) {
+		[projectNames addObject:projectItem.title];
+	}
+	return projectNames;
 }
 
 @end

@@ -14,6 +14,17 @@
 
 @implementation AddTaskWindowController
 
+- (id)initWithWindowNibName:(NSString *)windowNibName andProjectList:(NSArray *)projects
+{
+	self = [super initWithWindowNibName:windowNibName];
+	if (self) {
+		self.projectNames = projects;
+	}
+
+	return self;
+}
+
+
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -27,7 +38,16 @@
 {
     [super windowDidLoad];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+	[self.projectList addItemsWithTitles:self.projectNames];
+}
+
+- (IBAction)addButtonClicked:(id)sender
+{
+	NSString *projectName = self.projectList.selectedItem.title;
+	NSString *task = self.taskField.stringValue;
+	if ([task isNotEqualTo:@""]) {
+		NSLog(@"Add '%@' for %@", task, projectName);
+	}
 }
 
 @end
