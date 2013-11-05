@@ -1,5 +1,5 @@
 //
-//  SettingsController.h
+//  SettingsWindowController.h
 //  TimeTrackerClient
 //
 //  Created by Marcin Swierczynski on 03.11.2013.
@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SettingsController : NSWindowController
+@interface SettingsWindowController : NSWindowController
 
 @end

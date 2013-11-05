@@ -1,18 +1,18 @@
 //
-//  SettingsController.m
+//  SettingsWindowController.m
 //  TimeTrackerClient
 //
 //  Created by Marcin Swierczynski on 03.11.2013.
 //  Copyright (c) 2013 UWS. All rights reserved.
 //
 
-#import "SettingsController.h"
+#import "SettingsWindowController.h"
 
-@interface SettingsController ()
+@interface SettingsWindowController ()
 
 @end
 
-@implementation SettingsController
+@implementation SettingsWindowController
 
 - (id)initWithWindow:(NSWindow *)window
 {

@@ -20,6 +20,12 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="ulk-XJ-v4k">
             <items>
+                <menuItem title="Add task..." id="g8J-Ya-0wY">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="addTaskMenuClicked:" target="494" id="bGf-mK-amT"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Projects" id="881-fX-Nqd">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Projects" id="b8p-Zz-E4M"/>

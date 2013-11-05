@@ -8,13 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class SettingsController;
+@class SettingsWindowController;
+@class AddTaskWindowController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property(assign) IBOutlet NSMenu *menu;
 @property(assign) IBOutlet NSMenu *projectManu;
 @property(strong) NSStatusItem *statusItem;
-@property(strong) SettingsController *settingsController;
+@property(strong) SettingsWindowController *settingsController;
+@property(strong) AddTaskWindowController *addTaskWindowController;
 
 @end

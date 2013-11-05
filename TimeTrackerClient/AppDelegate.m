@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "ConfigService.h"
 #import "TimeTrackerRestService.h"
-#import "SettingsController.h"
+#import "SettingsWindowController.h"
+#import "AddTaskWindowController.h"
 
 @implementation AppDelegate
 
@@ -88,8 +89,14 @@
 
 - (IBAction)settingsMenuClicked:(id)sender
 {
-	self.settingsController = [[SettingsController alloc] initWithWindowNibName:@"SettingsController"];
+	self.settingsController = [[SettingsWindowController alloc] initWithWindowNibName:@"SettingsWindowController"];
 	[self.settingsController showWindow:self];
+}
+
+- (IBAction)addTaskMenuClicked:(id)sender
+{
+	self.addTaskWindowController = [[AddTaskWindowController alloc] initWithWindowNibName:@"AddTaskWindowController"];
+	[self.addTaskWindowController showWindow:self];
 }
 
 @end
