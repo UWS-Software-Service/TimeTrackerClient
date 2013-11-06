@@ -46,4 +46,12 @@
 	}];
 }
 
+- (void)add:(NSString *)task to:(NSString *)project responseHandler:(void (^)(BOOL))block
+{
+	[[ApiClent instance] add:task to:project responseHandler:^(BOOL isSuccess) {
+		block(isSuccess);
+	}];
+}
+
+
 @end

@@ -14,4 +14,6 @@
 
 - (void)logWorkFor:(NSString *)project responseHandler:(void (^)(BOOL))block;
 
+- (void)add:(NSString *)task to:(NSString *)project responseHandler:(void (^)(BOOL))block;
+
 @end

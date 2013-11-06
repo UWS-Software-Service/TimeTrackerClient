@@ -12,6 +12,7 @@ static NSString *const ENDPOINT = @"timeLog";
 static NSString *const PROJECTS_ENDPOINT = @"projects";
 static NSString *const TIME_SPENT_ENDPOINT = @"timeSpentToday";
 static NSString *const LOG_WORK_ENDPOINT = @"log";
+static NSString *const ADD_TASK_ENDPOINT = @"addTask";
 
 @implementation ApiClent {
 
@@ -69,13 +70,27 @@ static NSString *const LOG_WORK_ENDPOINT = @"log";
 	NSMutableDictionary *parameters = [self createParams];
 	[parameters setValue:project forKey:@"name"];
 
-	[[ApiClent instance] POST:[self endpointTo:LOG_WORK_ENDPOINT] parameters:parameters
+	[self post:parameters to:[self endpointTo:LOG_WORK_ENDPOINT] success:success];
+}
+
+- (void)post:(NSMutableDictionary *)parameters to:(NSString *)endpoint success:(void (^)(BOOL))success
+{
+	[[ApiClent instance] POST:endpoint parameters:parameters
 	                  success:^(AFHTTPRequestOperation *operation, id responseObject) {
 		                  [operation.response statusCode] == 201 ? success(YES) : success(NO);
 	                  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		NSLog(@"%@", error);
 		success(NO);
 	}];
+}
+
+- (void)add:(NSString *)task to:(NSString *)project responseHandler:(void (^)(BOOL))success
+{
+	NSMutableDictionary *parameters = [self createParams];
+	[parameters setValue:task forKey:@"task"];
+	[parameters setValue:project forKey:@"name"];
+
+	[self post:parameters to:[self endpointTo:ADD_TASK_ENDPOINT] success:success];
 }
 
 - (NSString *)endpointTo:(NSString *)endpoint
