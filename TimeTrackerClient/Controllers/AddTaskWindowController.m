@@ -15,11 +15,11 @@
 
 @implementation AddTaskWindowController
 
-- (id)initWithWindowNibName:(NSString *)windowNibName andProjectList:(NSArray *)projects
+- (id)initWithWindowNibName:(NSString *)windowNibName andProjects:(NSDictionary *)projects
 {
 	self = [super initWithWindowNibName:windowNibName];
 	if (self) {
-		self.projectNames = projects;
+		self.projects = projects;
 	}
 
 	return self;
@@ -38,8 +38,18 @@
 - (void)windowDidLoad
 {
 	[super windowDidLoad];
+	[self.projectList addItemsWithTitles:self.projects.allKeys];
+	[self selectActiveProject];
+}
 
-	[self.projectList addItemsWithTitles:self.projectNames];
+- (void)selectActiveProject
+{
+	for (NSMenuItem *projectItem in self.projectList.itemArray) {
+		BOOL isProjectActive = [[self.projects objectForKey:projectItem.title] boolValue];
+		if (isProjectActive) {
+			[self.projectList selectItem:projectItem];
+		}
+	}
 }
 
 - (IBAction)addButtonClicked:(id)sender

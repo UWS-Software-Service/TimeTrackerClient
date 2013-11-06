@@ -96,17 +96,18 @@
 - (IBAction)addTaskMenuClicked:(id)sender
 {
 	self.addTaskWindowController = [[AddTaskWindowController alloc] initWithWindowNibName:@"AddTaskWindowController"
-	                                                                       andProjectList:[self projectNames]];
+	                                                                          andProjects:[self projectsWithState]];
 	[self.addTaskWindowController showWindow:self];
 }
 
-- (NSArray *)projectNames
+- (NSDictionary *)projectsWithState
 {
-	NSMutableArray *projectNames = [NSMutableArray array];
+	NSMutableDictionary *projectsWithState = [NSMutableDictionary dictionary];
 	for (NSMenuItem *projectItem in self.projectManu.itemArray) {
-		[projectNames addObject:projectItem.title];
+		BOOL isProjectActive = [projectItem.image.name isEqualToString:NSImageNameStatusUnavailable];
+		[projectsWithState setObject:[NSNumber numberWithBool:isProjectActive] forKey:projectItem.title];
 	}
-	return projectNames;
+	return projectsWithState;
 }
 
 @end

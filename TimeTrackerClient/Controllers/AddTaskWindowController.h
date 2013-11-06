@@ -12,7 +12,7 @@
 
 @property(assign) IBOutlet NSPopUpButton *projectList;
 @property(assign) IBOutlet NSTextField *taskField;
-@property(strong) NSArray *projectNames;
+@property(strong) NSDictionary *projects;
 
-- (id)initWithWindowNibName:(NSString *)windowNibName andProjectList:(NSArray *)projects;
+- (id)initWithWindowNibName:(NSString *)windowNibName andProjects:(NSDictionary *)projects;
 @end
